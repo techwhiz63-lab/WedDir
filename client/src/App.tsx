@@ -11,7 +11,7 @@ import FamilyExplorerPage from "@/pages/FamilyExplorer";
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Home} />      <Route path="/family-explorer" component={FamilyExplorerPage} />      {/* Fallback to 404 */}
+      <Route path="/" component={WeddingPage} />      <Route path="/family-explorer" component={FamilyExplorerPage} />      {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
   );
