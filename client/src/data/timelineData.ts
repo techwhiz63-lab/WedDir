@@ -6,9 +6,9 @@ export const timelineScenes: TimelineScene[] = [
     scrollRange: [0.0, 0.2],
     title: 'The Beginning',
     date: 'October 2025',
-    message: 'Every love story starts with a single moment. Ours began as a beautiful coincidence, a chance encounter that would change everything.',
+    message: 'Every story starts with a single moment. Ours began as a beautiful coincidence, a chance encounter that would change everything.',
     image: {
-      src: '/phone-notification.jpg',
+      src: '/images/timeline/scene-1.jpg',
       alt: 'The beginning of our journey',
       focalPoint: 'center'
     },
@@ -33,7 +33,7 @@ export const timelineScenes: TimelineScene[] = [
     date: '04 November 2025',
     message: 'Through shared laughter and late-night conversations, we discovered a connection that went beyond words. Every moment together felt natural, effortless.',
     image: {
-      src: '/chat.png',
+      src: '/images/timeline/scene-1.jpg',
       alt: 'Growing closer',
       focalPoint: 'center'
     },
@@ -58,7 +58,7 @@ export const timelineScenes: TimelineScene[] = [
     date: '06 December 2025',
     message: 'As time passed, we realized we weren\'t just creating memories—we were building a future. Our dreams began to intertwine, painting a picture of tomorrow together.',
     image: {
-      src: '/first_meet.png',
+      src: '/images/timeline/scene-1.jpg',
       alt: 'Building dreams together',
       focalPoint: 'center'
     },
@@ -83,7 +83,7 @@ export const timelineScenes: TimelineScene[] = [
     date: '13 December 2025',
     message: 'After countless conversations across the distance, we felt an undeniable connection. The moment we decided to meet for the first time, nerves and excitement filled our hearts as the virtual became beautifully real.',
     image: {
-      src: '/we-meet.jpg',
+      src: '/images/timeline/scene-1.jpg',
       alt: 'Our first meeting',
       focalPoint: 'center'
     },
@@ -108,7 +108,7 @@ export const timelineScenes: TimelineScene[] = [
     date: '04 January 2026',
     message: 'We discovered that we weren\'t just partners, but best friends destined to walk this path together. In quiet moments and life\'s little adventures, our bond grew stronger.',
     image: {
-      src: '/engagement.jpg',
+      src: '/images/timeline/scene-1.jpg',
       alt: 'A promise of forever',
       focalPoint: 'center'
     },
@@ -133,7 +133,7 @@ export const timelineScenes: TimelineScene[] = [
     date: '29 March, 2026',
     message: 'And now, we invite you to witness the next chapter of our story. With hearts full of joy and the blessings of our families, we begin our forever.',
     image: {
-      src: '/Wedding.png',
+      src: '/images/timeline/scene-1.jpg',
       alt: 'Our wedding day',
       focalPoint: 'center'
     },

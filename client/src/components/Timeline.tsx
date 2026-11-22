@@ -168,7 +168,7 @@ export function Timeline() {
     <section
       id="story"
       ref={containerRef}
-      className="relative bg-background h-screen overflow-hidden"
+      className="relative bg-transparent h-screen overflow-hidden"
     >
       {/* Timeline viewport */}
       <div className="w-full h-full">

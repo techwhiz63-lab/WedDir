@@ -1,81 +1,122 @@
-import groomAvatar from '@assets/groomAvatar.png';
-import brideAvatar from '@assets/brideAvatar.png';
-import coupleImg from '@assets/coupleImg.jpeg';
-import coupleBg from '@assets/couple_bg.png';
-import coupleVideo from '@assets/couple_video.mp4';
-import weddingCardImg from '@assets/wedding_card.png';
-import receptionCardImg from '@assets/reception_card.png';
-
 export const weddingData = {
-  media: {
-    coupleImg,
-    coupleBg,
-    coupleVideo,
-  },
+  musicUrl: "/audio/wedding-music.mp3",
+
   groom: {
-    name: 'Akhil',
-    fullName: 'Akhilnadh P C',
-    role: 'The Groom',
-    address: 'Pullolikkal House, Solvent Road, Irinjalakuda',
-    location: 'Anna nagar, Chennai',
-    profession: 'Data Scientist',
-    company: 'AIR INDIA',
+    name: "Rohan",
+    fullName: "Rohan Das",
+    role: "The Groom",
+    profession: "Software Architect",
+    jobTitle: "Software Architect",
+    company: "TechCorp",
+    address: "Kochi, Kerala",
+    location: "Kochi, Kerala",
+    quote: "From the moment our paths crossed, every day has felt like a celebration.",
+    photoUrl: "/images/couple/groom.png",
     family: {
-      father: 'Dr. P.P Chandran',
-      mother: 'Preethy K.S',
+      father: "Mohan Das",
+      mother: "Sunitha Mohan",
+      sister: "Sneha Das",
+      brother: "",
     },
-    photoUrl: groomAvatar,
-    quote: "A storyteller through the lens, capturing life's most beautiful moments one frame at a time.",
     social: {
-      instagram: 'http://instagram.com',
+      instagram: "https://instagram.com",
+      linkedin: "",
     },
   },
+
   bride: {
-    name: 'Sethu',
-    fullName: 'Sethulakshmi R',
-    role: 'The Bride',
-    address: 'Varanattu House, North Aduvassery, South Aduvassery P O, 683578 - Aluva, Ernakulam',
-    location: 'Anna nagar, Chennai',
-    profession: 'Design Engineer',
-    company: 'Larsen & Toubro',
+    name: "Meera",
+    fullName: "Meera Vinod",
+    role: "The Bride",
+    profession: "Product Designer",
+    jobTitle: "Product Designer",
+    company: "DesignStudio",
+    address: "Thiruvananthapuram, Kerala",
+    location: "Thiruvananthapuram, Kerala",
+    quote: "In you, I found my calm, my laughter, and my forever home.",
+    photoUrl: "/images/couple/bride.png",
     family: {
-      father: 'Mr. Rajesh V Chandran',
-      mother: 'Late Seeja Rajesh',
-      sister: 'Meenakshi R',
-      brother: 'Rakesh R',
+      father: "Vinod Kumar",
+      mother: "Radhika Vinod",
+      sister: "Kavya Vinod",
+      brother: "",
     },
-    photoUrl: brideAvatar,
-    quote: 'A blend of grace and intellect, weaving dreams into reality with every step.',
     social: {
-      instagram: 'https://instagram.com',
+      instagram: "https://instagram.com",
+      linkedin: "",
     },
   },
+
+  couple: {
+    photoUrl: "/images/couple/coupleI-banner.jpeg",
+    photoWithoutBg: "/images/couple/couple-cutout.png",
+    videoUrl: "/video/couple_video.mp4",
+  },
+
+  media: {
+    coupleVideo: "/video/couple_video.mp4",
+    coupleImg: "/images/couple/coupleI-banner.jpeg",
+    coupleBg: "/images/hero-bg.jpg",
+  },
+
   wedding: {
-    date: new Date('2026-12-29T10:00:00'),
-    dateString: 'December 29, 2026',
-    dateShort: '29 . 12 . 2026',
-    location: 'Anna nagar, Chennai',
+    date: new Date("2026-12-29T10:30:00"),
+    dateShort: "December 29, 2026",
+    dateString: "Tuesday, December 29, 2026",
+    location: "Kerala, India",
+
     ceremony: {
-      title: 'The Muhurtham & Ceremony',
-      place: 'Green Park Convention Centre',
-      date: 'Tuesday, December 29, 2026',
-      time: '10:00 AM – 12:00 PM',
-      location: 'Anna nagar, Chennai',
-      googleMapUrl: 'https://share.google/FIHKjZx5IddOJtyhM',
-      description: 'With hearts full of joy and love, we cordially invite you to witness and bless the sacred union of our souls. Your presence will add grace to our special day as two families become one.',
-      invitationCardUrl: weddingCardImg,
+      title: "Wedding Muhurtham",
+      place: "Guruvayur Temple Auditorium",
+      date: "December 29, 2026",
+      time: "10:30 AM - 11:30 AM",
+      location: "East Nada, Guruvayur, Thrissur, Kerala",
+      geolocation: "Guruvayur, Thrissur, Kerala",
+      googleMapUrl: "https://google.com",
+      description:
+        "With the blessings of our parents and elders, we invite you to witness our sacred union.",
+      invitationCardUrl: "/images/invites/wedding_card.png",
     },
+
     reception: {
-      title: 'Evening Wedding Reception',
-      place: 'St Thomas Cathedral Convention Centre, Santhome Hall',
-      date: 'Tuesday, December 29, 2026',
-      time: '6:00 PM Onwards',
-      location: 'Anna nagar, Chennai',
-      googleMapUrl: 'https://share.google/FIHKjZx5IddOJtyhM',
-      description: 'Join us for an evening of delicious food, heartfelt toasts, and celebration under the stars. Your presence is the greatest gift we could ask for.',
-      invitationCardUrl: receptionCardImg,
+      title: "Evening Wedding Reception",
+      place: "Grand Hyatt Convention Centre",
+      date: "December 29, 2026",
+      time: "6:00 PM - 10:00 PM",
+      location: "Bolgatty Island, Kochi, Kerala",
+      geolocation: "Bolgatty Island, Kochi, Kerala",
+      googleMapUrl: "https://google.com",
+      description:
+        "Join us for an evening of music, dinner, and joyous celebration.",
+      invitationCardUrl: "/images/invites/reception_card.png",
     },
   },
+
+  people: [
+    {
+      name: "Sneha Das",
+      relationship: "Groom's Sister",
+      side: "groom",
+      profileUrl: "/images/people/person-1.jpeg",
+      instagramUrl: "",
+    },
+    {
+      name: "Kavya Vinod",
+      relationship: "Bride's Sister",
+      side: "bride",
+      profileUrl: "/images/people/person-2.jpeg",
+      instagramUrl: "",
+    },
+     {
+      name: "Kavya Vinod",
+      relationship: "Bride's Sister",
+      side: "bride",
+      profileUrl: "/images/people/person-2.jpeg",
+      instagramUrl: "",
+    }
+  ],
+};
+
 
 
 
@@ -165,87 +206,98 @@ export const weddingData = {
 //       invitationCardUrl: receptionCardImg,
 //     },
 //   },
-  couple: {
-    photoUrl: coupleImg,
-    photoWithoutBg: coupleBg,
-    videoUrl: coupleVideo,
-  },
-  people: [
-    {
-      name: "Father of Groom",
-      profileUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-      relationship: "Father",
-      side: "groom",
-      instagramUrl: null,
-    },
-    {
-      name: "Mother of Groom",
-      profileUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
-      relationship: "Mother",
-      side: "groom",
-      instagramUrl: null,
-    },
-    {
-      name: "Father of Bride",
-      profileUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
-      relationship: "Father",
-      side: "bride",
-      instagramUrl: null,
-    },
-    {
-      name: "Mother of Bride",
-      profileUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
-      relationship: "Mother",
-      side: "bride",
-      instagramUrl: null,
-    },
-    {
-      name: "Best Man",
-      profileUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-      relationship: "Best Friend",
-      side: "groom",
-      instagramUrl: null,
-    },
-    {
-      name: "Maid of Honor",
-      profileUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-      relationship: "Best Friend",
-      side: "bride",
-      instagramUrl: null,
-    },
-  ],
-  gallery: [
-    {
-      url: "https://images.unsplash.com/photo-1519741497674-611481863552",
-      alt: "Wedding moment 1",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1591604466107-ec97de577aff",
-      alt: "Wedding moment 2",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1606800052052-a08af7148866",
-      alt: "Wedding moment 3",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1583939003579-730e3918a45a",
-      alt: "Wedding moment 4",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1519225421980-715cb0215aed",
-      alt: "Wedding moment 5",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6",
-      alt: "Wedding moment 6",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1523438885200-e635ba2c371e",
-      alt: "Wedding moment 7",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486",
-      alt: "Wedding moment 8",
-    },
-  ],
-};
+
+
+
+
+
+
+
+
+
+
+
+//   couple: {
+//     photoUrl: coupleImg,
+//     photoWithoutBg: coupleBg,
+//     videoUrl: coupleVideo,
+//   },
+//   people: [
+//     {
+//       name: "Father of Groom",
+//       profileUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+//       relationship: "Father",
+//       side: "groom",
+//       instagramUrl: null,
+//     },
+//     {
+//       name: "Mother of Groom",
+//       profileUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+//       relationship: "Mother",
+//       side: "groom",
+//       instagramUrl: null,
+//     },
+//     {
+//       name: "Father of Bride",
+//       profileUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+//       relationship: "Father",
+//       side: "bride",
+//       instagramUrl: null,
+//     },
+//     {
+//       name: "Mother of Bride",
+//       profileUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+//       relationship: "Mother",
+//       side: "bride",
+//       instagramUrl: null,
+//     },
+//     {
+//       name: "Best Man",
+//       profileUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+//       relationship: "Best Friend",
+//       side: "groom",
+//       instagramUrl: null,
+//     },
+//     {
+//       name: "Maid of Honor",
+//       profileUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+//       relationship: "Best Friend",
+//       side: "bride",
+//       instagramUrl: null,
+//     },
+//   ],
+//   gallery: [
+//     {
+//       url: "https://images.unsplash.com/photo-1519741497674-611481863552",
+//       alt: "Wedding moment 1",
+//     },
+//     {
+//       url: "https://images.unsplash.com/photo-1591604466107-ec97de577aff",
+//       alt: "Wedding moment 2",
+//     },
+//     {
+//       url: "https://images.unsplash.com/photo-1606800052052-a08af7148866",
+//       alt: "Wedding moment 3",
+//     },
+//     {
+//       url: "https://images.unsplash.com/photo-1583939003579-730e3918a45a",
+//       alt: "Wedding moment 4",
+//     },
+//     {
+//       url: "https://images.unsplash.com/photo-1519225421980-715cb0215aed",
+//       alt: "Wedding moment 5",
+//     },
+//     {
+//       url: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6",
+//       alt: "Wedding moment 6",
+//     },
+//     {
+//       url: "https://images.unsplash.com/photo-1523438885200-e635ba2c371e",
+//       alt: "Wedding moment 7",
+//     },
+//     {
+//       url: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486",
+//       alt: "Wedding moment 8",
+//     },
+//   ],
+// };

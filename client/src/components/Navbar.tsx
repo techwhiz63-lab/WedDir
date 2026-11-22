@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import { cn } from "@/lib/utils";
-import logo from "@assets/logo_1768316403138.jpeg";
+const logo = "/images/logo.jpeg";
 import { Menu, X } from "lucide-react";
 
 const NAV_ITEMS = [
   { label: "Home", href: "#home" },
   { label: "Couple", href: "#couple" },
   { label: "Our Story", href: "#story" },
-  // { label: "Gallery", href: "#gallery" },
   { label: "Wedding", href: "#wedding" },
   { label: "Reception", href: "#reception" },
   { label: "Family", href: "#family" },
-  // { label: "People", href: "#people" },
+  { label: "People", href: "#people" },
 ];
+
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,7 +22,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

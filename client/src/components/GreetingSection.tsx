@@ -162,7 +162,7 @@ export function GreetingSection() {
       <div
         className="pointer-events-none absolute inset-0 bg-no-repeat"
         style={{
-          backgroundImage: `url('/engagement.jpg')`,
+         // backgroundImage: `url('/images/engagement-bg.jpg')`,
           backgroundSize: "contain",
           backgroundPosition: "center",
         }}
@@ -182,7 +182,7 @@ export function GreetingSection() {
           scale: Array.of(1, 1.08, 1),
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute -top-28 -left-24 h-96 w-96 rounded-full bg-gradient-to-br from-amber-300/25 via-rose-300/20 to-transparent blur-3xl"
+        className="pointer-events-none absolute -top-28 -left-24 h-96 w-96 rounded-full bg-gradient-to-br from-amber-300/25 via-rose-300/20 to-transparent blur-3xl hidden md:block"
       />
       <motion.div
         animate={{
@@ -191,7 +191,7 @@ export function GreetingSection() {
           scale: Array.of(1, 1.1, 1),
         }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute top-1/3 -right-28 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tl from-primary/15 via-amber-200/25 to-transparent blur-3xl"
+        className="pointer-events-none absolute top-1/3 -right-28 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tl from-primary/15 via-amber-200/25 to-transparent blur-3xl hidden md:block"
       />
       <motion.div
         animate={{
@@ -199,7 +199,7 @@ export function GreetingSection() {
           scale: Array.of(1, 1.06, 1),
         }}
         transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute -bottom-24 left-1/4 h-80 w-80 rounded-full bg-rose-200/25 blur-3xl"
+        className="pointer-events-none absolute -bottom-24 left-1/4 h-80 w-80 rounded-full bg-rose-200/25 blur-3xl hidden md:block"
       />
 
       <div className="container relative z-10 mx-auto px-4">
