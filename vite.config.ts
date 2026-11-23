@@ -4,81 +4,51 @@ import { VitePWA } from "vite-plugin-pwa";
 import path from "path";
 
 export default defineConfig({
+  root: path.resolve(__dirname, "client"),
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "client/src"),
+    },
+  },
   plugins: [
     react(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.ico", "icons/*.png"],
+      includeAssets: ["favicon.ico", "icons/*.svg"],
       manifest: {
-        name: "Sethu Weds Akhil",
-        short_name: "SethuAkhil",
-        description: "Wedding invitation for Sethu and Akhil",
-        theme_color: "#E91E63",
-        background_color: "#ffffff",
+        name: "Wedding Invitation",
+        short_name: "Wedding",
+        theme_color: "#FDF6EC",
+        background_color: "#FDF6EC",
         display: "standalone",
-        scope: "/",
         start_url: "/",
-        orientation: "portrait-primary",
-        icons: [
-          {
-            src: "/icons/icon.svg",
-            sizes: "512x512",
-            type: "image/svg+xml",
-            purpose: "any maskable",
-          },
-        ],
       },
       workbox: {
-        globDirectory: "dist/public",
-        globPatterns: ["**/*.{js,css,html,ico,png,svg,woff,woff2}"],
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5 MB
+        // 1. ONLY precache core code & icons—exclude mp4, mp3, png, jpg, jpeg
+        globPatterns: ["**/*.{js,css,html,ico,svg}"],
+
+        // 2. Skip any single file larger than 500 KB during precache
+        maximumFileSizeToCacheInBytes: 500 * 1024,
+
+        // 3. Cache images on-demand ONLY after the user actually views them
         runtimeCaching: [
           {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+            urlPattern: /\.(?:png|jpg|jpeg|webp)$/i,
             handler: "CacheFirst",
             options: {
-              cacheName: "google-fonts-cache",
+              cacheName: "wedding-images-cache",
               expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365, // 365 days
-              },
-              cacheableResponse: {
-                statuses: [0, 200],
-              },
-            },
-          },
-          {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-            handler: "CacheFirst",
-            options: {
-              cacheName: "gstatic-fonts-cache",
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365, // 365 days
-              },
-              cacheableResponse: {
-                statuses: [0, 200],
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
               },
             },
           },
         ],
-      },
-      devOptions: {
-        enabled: true,
-        type: "module",
-        navigateFallback: "index.html",
       },
     }),
   ],
-  resolve: {
-    alias: {
-      "@": path.resolve(import.meta.dirname, "client", "src"),
-      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
-    },
-  },
-  root: path.resolve(import.meta.dirname, "client"),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
   },
 });

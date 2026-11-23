@@ -21,6 +21,8 @@ export function CoupleSection() {
             <img
               src={weddingData.couple.photoWithoutBg}
               alt={`${weddingData.groom.name} & ${weddingData.bride.name}`}
+              loading="lazy"
+              decoding="async"
               className="w-full h-auto object-contain drop-shadow-[0_20px_35px_rgba(180,83,9,0.22)]"
             />
           </div>
@@ -68,6 +70,8 @@ export function CoupleSection() {
                 <img
                   src={weddingData.groom.photoUrl}
                   alt={weddingData.groom.fullName}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </TiltedCard>
@@ -296,6 +300,8 @@ export function CoupleSection() {
                 <img
                   src={weddingData.bride.photoUrl}
                   alt={weddingData.bride.fullName}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </TiltedCard>

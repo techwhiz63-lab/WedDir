@@ -1,154 +1,64 @@
-import { TimelineScene } from '@/types/timeline';
+import { TimelineScene } from "@/types/timeline";
 
 export const timelineScenes: TimelineScene[] = [
   {
-    id: 'scene-1',
-    scrollRange: [0.0, 0.2],
-    title: 'The Beginning',
-    date: 'October 2025',
-    message: 'Every love story starts with a single moment. Ours began as a beautiful coincidence, a chance encounter that would change everything.',
+    id: "scene-1",
+    title: "First Glance",
+    date: "Chapter One",
+    message:
+      "What began as a simple hello turned into endless conversations and an effortless bond neither of us expected.",
     image: {
-      src: '/phone-notification.jpg',
-      alt: 'The beginning of our journey',
-      focalPoint: 'center'
+      src: "/images/timeline/scene-1.jpg",
+      alt: "First Glance",
+      focalPoint: "center",
     },
-    motion: {
-      enter: {
-        scale: 1.0,
-        opacity: 1,
-        y: 0
-      },
-      exit: {
-        scale: 0.8,
-        opacity: 0,
-        y: -60
-      },
-      imageParallax: 50
-    }
   },
   {
-    id: 'scene-2',
-    scrollRange: [0.2, 0.33],
-    title: 'First Conversations',
-    date: '04 November 2025',
-    message: 'Through shared laughter and late-night conversations, we discovered a connection that went beyond words. Every moment together felt natural, effortless.',
+    id: "scene-2",
+    title: "Growing Closer",
+    date: "Chapter Two",
+    message:
+      "Through coffee dates, shared dreams, and quiet moments, we discovered a home in each other.",
     image: {
-      src: '/chat.png',
-      alt: 'Growing closer',
-      focalPoint: 'center'
+      src: "/images/timeline/scene-2.png",
+      alt: "Growing Closer",
+      focalPoint: "center",
     },
-    motion: {
-      enter: {
-        scale: 1.2,
-        opacity: 0,
-        y: 100
-      },
-      exit: {
-        scale: 0.8,
-        opacity: 0,
-        y: -60
-      },
-      imageParallax: 45
-    }
   },
   {
-    id: 'scene-3',
-    scrollRange: [0.33, 0.5],
-    title: 'Building Dreams',
-    date: '06 December 2025',
-    message: 'As time passed, we realized we weren\'t just creating memories—we were building a future. Our dreams began to intertwine, painting a picture of tomorrow together.',
+    id: "scene-3",
+    title: "Families Unite",
+    date: "Chapter Three",
+    message:
+      "With the warmth and blessings of our parents and elders, two families came together as one.",
     image: {
-      src: '/first_meet.png',
-      alt: 'Building dreams together',
-      focalPoint: 'center'
+      src: "/images/timeline/scene-3.jpg",
+      alt: "Families Unite",
+      focalPoint: "center",
     },
-    motion: {
-      enter: {
-        scale: 1.2,
-        opacity: 0,
-        y: 100
-      },
-      exit: {
-        scale: 0.8,
-        opacity: 0,
-        y: -60
-      },
-      imageParallax: 40
-    }
   },
   {
-    id: 'scene-4',
-    scrollRange: [0.5, 0.66],
-    title: 'First Meeting',
-    date: '13 December 2025',
-    message: 'After countless conversations across the distance, we felt an undeniable connection. The moment we decided to meet for the first time, nerves and excitement filled our hearts as the virtual became beautifully real.',
+    id: "scene-4",
+    title: "The Engagement",
+    date: "Chapter Four",
+    message:
+      "Surrounded by love, laughter, and marigold blossoms, we exchanged rings and promised forever.",
     image: {
-      src: '/we-meet.jpg',
-      alt: 'Our first meeting',
-      focalPoint: 'center'
+      src: "/images/timeline/scene-4.png",
+      alt: "The Engagement",
+      focalPoint: "center",
     },
-    motion: {
-      enter: {
-        scale: 1.2,
-        opacity: 0,
-        y: 100
-      },
-      exit: {
-        scale: 0.8,
-        opacity: 0,
-        y: -60
-      },
-      imageParallax: 42
-    }
   },
   {
-    id: 'scene-5',
-    scrollRange: [0.66, 0.83],
-    title: 'The Promise',
-    date: '04 January 2026',
-    message: 'We discovered that we weren\'t just partners, but best friends destined to walk this path together. In quiet moments and life\'s little adventures, our bond grew stronger.',
+    id: "scene-5",
+    title: "Forever Begins",
+    date: "Chapter Five",
+    message:
+      "Now we invite you to celebrate with us as we take our sacred vows and begin our greatest adventure.",
     image: {
-      src: '/engagement.jpg',
-      alt: 'A promise of forever',
-      focalPoint: 'center'
+      src: "/images/timeline/scene-5.jpg",
+      alt: "Forever Begins",
+      focalPoint: "center",
     },
-    motion: {
-      enter: {
-        scale: 1.2,
-        opacity: 0,
-        y: 100
-      },
-      exit: {
-        scale: 0.8,
-        opacity: 0,
-        y: -60
-      },
-      imageParallax: 35
-    }
   },
-  {
-    id: 'scene-6',
-    scrollRange: [0.83, 1.0],
-    title: 'Our Wedding Day',
-    date: '29 March, 2026',
-    message: 'And now, we invite you to witness the next chapter of our story. With hearts full of joy and the blessings of our families, we begin our forever.',
-    image: {
-      src: '/Wedding.png',
-      alt: 'Our wedding day',
-      focalPoint: 'center'
-    },
-    motion: {
-      enter: {
-        scale: 1.2,
-        opacity: 0,
-        y: 100
-      },
-      exit: {
-        scale: 0.95,
-        opacity: 0.3,
-        y: -40
-      },
-      imageParallax: 30
-    }
-  }
 ];

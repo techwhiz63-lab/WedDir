@@ -1,3 +1,4 @@
+// client/src/components/FloatingDock.tsx
 import React, { useRef } from "react";
 import {
   motion,
@@ -9,6 +10,7 @@ import {
 import {
   Heart,
   BookOpen,
+  Images,
   CalendarHeart,
   Users,
   MessageCircleHeart,
@@ -44,7 +46,7 @@ function DockIcon({
     return val - bounds.x - bounds.width / 2;
   });
 
-  const widthSync = useTransform(distance, [-120, 0, 120], [40, 56, 40]);
+  const widthSync = useTransform(distance, [-110, 0, 110], [38, 52, 38]);
   const width = useSpring(widthSync, { mass: 0.1, stiffness: 180, damping: 14 });
 
   const handleClick = () => {
@@ -53,10 +55,7 @@ function DockIcon({
       return;
     }
     if (item.href) {
-      const el = document.querySelector(item.href);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-      }
+      document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -70,17 +69,12 @@ function DockIcon({
       aria-label={item.label}
       className={`group relative flex items-center justify-center rounded-full border transition-colors cursor-pointer ${
         item.isActive
-          ? "bg-gradient-to-br from-rose-800 to-amber-700 text-amber-50 border-amber-300 shadow-md"
-          : "bg-white/90 hover:bg-amber-50 text-stone-700 hover:text-rose-800 border-amber-300/60 shadow-sm"
+          ? "bg-gradient-to-br from-rose-900 to-amber-800 text-amber-50 border-amber-300 shadow-md"
+          : "bg-white/95 hover:bg-amber-50 text-stone-700 hover:text-rose-900 border-amber-300/70 shadow-sm"
       }`}
     >
-      <span className="w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center">
+      <span className="w-4 h-4 flex items-center justify-center">
         {item.icon}
-      </span>
-
-      {/* Hover Tooltip on Desktop */}
-      <span className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-md bg-stone-900/90 text-amber-50 text-[10px] uppercase tracking-widest font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block shadow-md">
-        {item.label}
       </span>
     </motion.button>
   );
@@ -95,7 +89,8 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({
 
   const navItems: DockItemConfig[] = [
     { label: "Couple", href: "#couple", icon: <Heart className="w-4 h-4" /> },
-    { label: "Our Story", href: "#story", icon: <BookOpen className="w-4 h-4" /> },
+    { label: "Story", href: "#story", icon: <BookOpen className="w-4 h-4" /> },
+    { label: "Gallery", href: "#gallery", icon: <Images className="w-4 h-4" /> },
     { label: "Events", href: "#wedding", icon: <CalendarHeart className="w-4 h-4" /> },
     { label: "Family", href: "#family", icon: <Users className="w-4 h-4" /> },
     { label: "Blessings", href: "#greetings", icon: <MessageCircleHeart className="w-4 h-4" /> },
@@ -115,14 +110,14 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({
   }
 
   return (
-    <div className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-[95vw]">
+    <div className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-[96vw]">
       <motion.div
         onMouseMove={(e) => mouseX.set(e.pageX)}
         onMouseLeave={() => mouseX.set(Infinity)}
-        initial={{ y: 80, opacity: 0 }}
+        initial={{ y: 60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        className="flex items-end gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 rounded-full bg-white/75 backdrop-blur-xl border border-amber-300/70 shadow-[0_12px_40px_-8px_rgba(120,53,15,0.28)]"
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="flex items-end gap-1.5 sm:gap-2.5 px-3 py-2 rounded-full bg-white/80 backdrop-blur-xl border border-amber-300/75 shadow-[0_12px_36px_-8px_rgba(120,53,15,0.28)]"
       >
         {navItems.map((item) => (
           <DockIcon key={item.label} mouseX={mouseX} item={item} />
